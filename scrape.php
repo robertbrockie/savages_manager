@@ -2,6 +2,7 @@
 
 	include('SimpleHtmlDom.php');
 	include('SavageScrapper.php');
+	include('SavagePlayer.php');
 
 	$savage_scrapper = new SavageScrapper();
 

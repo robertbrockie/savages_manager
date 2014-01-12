@@ -32,11 +32,26 @@
 		public function getRoaster() {
 			$dom = $this->fetch(self::TEAM_STATS_PAGE);
 
-			$boxscores = $dom->find('table[class=boxscores]');
+			// find the table containing the players
+			$boxscore = $dom->find('table[class=boxscores]', 2);
 
-			echo 'found '.count($boxscores).' tables!'."\n";
+			// find the player rows
+			$players = $boxscore->find('tr[class=boxscores_tables5]');
 
+			foreach ($players as $player) {
+				$savage_player = new SavagePlayer();
+				$savage_player->setNumber($player->find('td', 0)->plaintext);
+				$savage_player->setName($player->find('td', 1)->plaintext);
+				$savage_player->setPosition($player->find('td', 2)->plaintext);
+				$savage_player->setGamesPlayed($player->find('td', 3)->plaintext);
+				$savage_player->setGoals($player->find('td', 4)->plaintext);
+				$savage_player->setAssists($player->find('td', 5)->plaintext);
+				$savage_player->setTotalPoints($player->find('td', 6)->plaintext);
+				$savage_player->setPointsPerGame($player->find('td', 7)->plaintext);
+				$savage_player->setPenaltyMinutes($player->find('td', 8)->plaintext);
 
+				print_r($savage_player);
+			}
 		}
 
 		public function fetch($url) {
