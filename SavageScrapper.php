@@ -13,7 +13,10 @@
 		const USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0';
 
 		// Team stats page
-		const TEAM_STATS_PAGE = 'http://esportsdesk.com/leagues/stats_1team.cfm?leagueID=528&teamID=387356&clientID=129';
+		const TEAM_STATS_URL = 'http://esportsdesk.com/leagues/stats_1team.cfm?leagueID=528&teamID=387356&clientID=129';
+
+		// Schedule page
+		const SCHEDULE_URL = 'http://esportsdesk.com/leagues/schedules.cfm?leagueID=528&clientID=129';
 
 		// This cannot be a const for some reason, probably because of the dirname() function
 		private $COOKIE_FILE;
@@ -30,7 +33,7 @@
 		}
 
 		public function getPlayerStats() {
-			$dom = $this->fetch(self::TEAM_STATS_PAGE);
+			$dom = $this->fetch(self::TEAM_STATS_URL);
 
 			// find the table containing the players
 			$boxscore = $dom->find('table[class=boxscores]', 2);
@@ -53,7 +56,7 @@
 		}
 
 		public function getGoalieStats() {
-			$dom = $this->fetch(self::TEAM_STATS_PAGE);
+			$dom = $this->fetch(self::TEAM_STATS_URL);
 
 			// find the table containg the goalies
 			$boxscore = $dom->find('table[class=boxscores]', 6);
