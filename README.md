@@ -1,4 +1,4 @@
-savages_manager
+# Savages Manager
 ===============
 
-savages_manager
+A management interface for the greatest ball hockey team in Montreal
