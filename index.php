@@ -17,7 +17,7 @@
 <html>
 	<head>
 		<meta charset='utf-8'>
-		<title>Bootstrap 101 Template</title>
+		<title>Montreal Savages</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -35,15 +35,15 @@
 			<table class="table">
 				<tbody>
 					<tr>
-						<td>Number</td>
-						<td>Name</td>
-						<td>Position</td>
-						<td>GP</td>
-						<td>G</td>
-						<td>A</td>
-						<td>PTS</td>
-						<td>P/G</td>
-						<td>PIM</td>
+						<th>Number</th>
+						<th>Name</th>
+						<th>Position</th>
+						<th>GP</th>
+						<th>G</th>
+						<th>A</th>
+						<th>PTS</th>
+						<th>P/G</th>
+						<th>PIM</th>
 					</tr>
 					<?php foreach($savage_players as $savage_players) { ?>
 					<tr>
@@ -67,22 +67,22 @@
 			<table class="table">
 				<tbody>
 					<tr>
-						<td>Number</td>
-						<td>Name</td>
-						<td>GP</td>
-						<td>W</td>
-						<td>L</td>
-						<td>T</td>
-						<td>G</td>
-						<td>A</td>
-						<td>PIM</td>
-						<td>SO</td>
-						<td>MP</td>
-						<td>GA</td>
-						<td>GAA</td>
-						<td>SH</td>
-						<td>SA</td>
-						<td>SAV%</td>
+						<th>Number</th>
+						<th>Name</th>
+						<th>GP</th>
+						<th>W</th>
+						<th>L</th>
+						<th>T</th>
+						<th>G</th>
+						<th>A</th>
+						<th>PIM</th>
+						<th>SO</th>
+						<th>MP</th>
+						<th>GA</th>
+						<th>GAA</th>
+						<th>SH</th>
+						<th>SA</th>
+						<th>SAV%</th>
 					</tr>
 					<?php foreach($savage_goalies as $savage_goalie) { ?>
 					<tr>
@@ -113,13 +113,13 @@
 			<table class="table">
 				<tbody>
 					<tr>
-						<td>Date</td>
-						<td>Time</td>
-						<td>Away Team</td>
-						<td>Away Score</td>
-						<td>Home Team</td>
-						<td>Home Score</td>
-						<td>Location</td>
+						<th>Date</th>
+						<th>Time</th>
+						<th>Away Team</th>
+						<th>Away Score</th>
+						<th>Home Team</th>
+						<th>Home Score</th>
+						<th>Location</th>
 					</tr>
 					<?php foreach($savage_games as $savage_game) { ?>
 					<tr>
